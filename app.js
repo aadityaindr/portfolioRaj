@@ -6,6 +6,7 @@ const port = 3019
 const app = express();
 app.use(express.static(__dirname))
 app.use(express.urlencoded({extended:true}))
+app.use(cors)
 
 
 mongoose.connect("mongodb+srv://aaditya:aaditya@cluster0.jgjbq.mongodb.net/")
