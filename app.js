@@ -7,7 +7,12 @@ const port = 3019
 const app = express();
 app.use(express.static(__dirname))
 app.use(express.urlencoded({extended:true}))
-app.use(cors)
+app.use(cors({
+    origin: "https://portfolio-ten-black-93.vercel.app/",
+})
+        );
+
+}
 
 
 mongoose.connect("mongodb+srv://aaditya:aaditya@cluster0.jgjbq.mongodb.net/")
